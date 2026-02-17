@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+    cn.qmsk.intermediary.framework.env.config.EnvEnvironmentPostProcessor

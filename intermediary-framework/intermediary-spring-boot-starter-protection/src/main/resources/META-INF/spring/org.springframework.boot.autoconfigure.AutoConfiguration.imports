@@ -1,0 +1,4 @@
+cn.qmsk.intermediary.framework.idempotent.config.IntermediaryIdempotentConfiguration
+cn.qmsk.intermediary.framework.lock4j.config.IntermediaryLock4jConfiguration
+cn.qmsk.intermediary.framework.ratelimiter.config.IntermediaryRateLimiterConfiguration
+cn.qmsk.intermediary.framework.signature.config.IntermediaryApiSignatureAutoConfiguration

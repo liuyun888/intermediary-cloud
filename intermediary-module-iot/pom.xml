@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>intermediary</artifactId>
+        <groupId>cn.qmsk.insurance</groupId>
+        <version>${revision}</version>
+    </parent>
+    <modules>
+        <module>intermediary-module-iot-api</module>
+        <module>intermediary-module-iot-core</module>
+        <module>intermediary-module-iot-server</module>
+        <module>intermediary-module-iot-gateway</module>
+    </modules>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>intermediary-module-iot</artifactId>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        物联网模块
+        <!-- TODO 芋艿：需要补充下说明！ -->
+    </description>
+
+</project>

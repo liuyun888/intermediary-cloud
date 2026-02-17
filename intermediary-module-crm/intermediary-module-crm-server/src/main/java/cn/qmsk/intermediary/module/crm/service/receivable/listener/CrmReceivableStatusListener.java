@@ -1,0 +1,40 @@
+package cn.qmsk.intermediary.module.crm.service.receivable.listener;
+
+import cn.qmsk.intermediary.module.bpm.api.event.BpmProcessInstanceStatusEvent;
+import cn.qmsk.intermediary.module.bpm.api.event.BpmProcessInstanceStatusEventListener;
+import cn.qmsk.intermediary.module.crm.enums.ApiConstants;
+import cn.qmsk.intermediary.module.crm.service.receivable.CrmReceivableService;
+import cn.qmsk.intermediary.module.crm.service.receivable.CrmReceivableServiceImpl;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+
+/**
+ * 回款审批的结果的监听器实现类
+ *
+ * @author HUIHUI
+ */
+@RestController
+@Validated
+public class CrmReceivableStatusListener extends BpmProcessInstanceStatusEventListener {
+
+    private static final String PREFIX = ApiConstants.PREFIX + "/receivable";
+
+    @Resource
+    private CrmReceivableService receivableService;
+
+    @Override
+    public String getProcessDefinitionKey() {
+        return CrmReceivableServiceImpl.BPM_PROCESS_DEFINITION_KEY;
+    }
+
+    @Override
+    @PostMapping(PREFIX + "/update-audit-status") // 目的：提供给 bpm-server rpc 调用
+    public void onEvent(@RequestBody BpmProcessInstanceStatusEvent event) {
+        receivableService.updateReceivableAuditStatus(Long.parseLong(event.getBusinessKey()), event.getStatus());
+    }
+
+}

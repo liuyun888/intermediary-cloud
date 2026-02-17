@@ -1,0 +1,1 @@
+package cn.qmsk.intermediary.module.crm.framework.permission.core;

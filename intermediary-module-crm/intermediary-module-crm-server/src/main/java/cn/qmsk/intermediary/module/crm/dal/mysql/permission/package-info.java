@@ -1,0 +1,1 @@
+package cn.qmsk.intermediary.module.crm.dal.mysql.permission;

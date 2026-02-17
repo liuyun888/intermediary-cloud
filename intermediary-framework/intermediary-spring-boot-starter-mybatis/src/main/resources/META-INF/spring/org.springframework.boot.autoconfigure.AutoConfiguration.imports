@@ -1,0 +1,3 @@
+cn.qmsk.intermediary.framework.datasource.config.IntermediaryDataSourceAutoConfiguration
+cn.qmsk.intermediary.framework.mybatis.config.IntermediaryMybatisAutoConfiguration
+cn.qmsk.intermediary.framework.translate.config.IntermediaryTranslateAutoConfiguration

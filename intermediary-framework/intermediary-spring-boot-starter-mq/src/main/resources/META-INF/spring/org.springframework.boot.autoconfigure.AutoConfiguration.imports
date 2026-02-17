@@ -1,0 +1,3 @@
+cn.qmsk.intermediary.framework.mq.redis.config.IntermediaryRedisMQProducerAutoConfiguration
+cn.qmsk.intermediary.framework.mq.redis.config.IntermediaryRedisMQConsumerAutoConfiguration
+cn.qmsk.intermediary.framework.mq.rabbitmq.config.IntermediaryRabbitMQAutoConfiguration

@@ -1,0 +1,8 @@
+cn.qmsk.intermediary.framework.apilog.config.IntermediaryApiLogAutoConfiguration
+cn.qmsk.intermediary.framework.jackson.config.IntermediaryJacksonAutoConfiguration
+cn.qmsk.intermediary.framework.swagger.config.IntermediarySwaggerAutoConfiguration
+cn.qmsk.intermediary.framework.web.config.IntermediaryWebAutoConfiguration
+cn.qmsk.intermediary.framework.apilog.config.IntermediaryApiLogRpcAutoConfiguration
+cn.qmsk.intermediary.framework.xss.config.IntermediaryXssAutoConfiguration
+cn.qmsk.intermediary.framework.banner.config.IntermediaryBannerAutoConfiguration
+cn.qmsk.intermediary.framework.encrypt.config.IntermediaryApiEncryptAutoConfiguration

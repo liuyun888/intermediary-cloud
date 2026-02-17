@@ -1,0 +1,2 @@
+cn.qmsk.intermediary.framework.quartz.config.IntermediaryXxlJobAutoConfiguration
+cn.qmsk.intermediary.framework.quartz.config.IntermediaryAsyncAutoConfiguration

@@ -1,0 +1,1 @@
+package cn.qmsk.intermediary.module.iot.gateway.protocol.emqx;
