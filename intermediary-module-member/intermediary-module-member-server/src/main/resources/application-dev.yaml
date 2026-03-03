@@ -3,9 +3,9 @@
 spring:
   cloud:
     nacos:
-      server-addr: 127.0.0.1:8848 # Nacos 服务器地址
-      username: # Nacos 账号
-      password: # Nacos 密码
+      server-addr: 117.78.11.25:8848 # Nacos 服务器地址
+      username: nacos
+      password: w69PiOQYfm
       discovery: # 【配置中心】配置项
         namespace: dev # 命名空间。这里使用 dev 开发环境
         group: DEFAULT_GROUP # 使用的 Nacos 配置分组，默认为 DEFAULT_GROUP
@@ -58,20 +58,15 @@ spring:
       primary: master
       datasource:
         master:
-          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
-          username: root
-          password: 123456
-        slave: # 模拟从库，可根据自己需要修改 # 模拟从库，可根据自己需要修改
-          lazy: true # 开启懒加载，保证启动速度
-          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
-          username: root
-          password: 123456
+          url: jdbc:mysql://117.78.11.25:3306/intermediary-cloud?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
+          username: intermediary
+          password: HF3DFnn88MmekHsf
 
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
   redis:
-    host: 400-infra.server.iocoder.cn # 地址
+    host: 127.0.0.1 # 地址
     port: 6379 # 端口
-    database: 1 # 数据库索引
+    database: 3 # 数据库索引
 #    password: 123456 # 密码，建议生产环境开启
 
 --- #################### MQ 消息队列相关配置 ####################
@@ -80,7 +75,7 @@ spring:
 xxl:
   job:
     admin:
-      addresses: http://127.0.0.1:9090/xxl-job-admin # 调度中心部署跟地址
+      addresses: http://192.168.0.1:8088/xxl-job-admin # 调度中心部署跟地址
 
 --- #################### 服务保障相关配置 ####################
 
