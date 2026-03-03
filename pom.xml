@@ -28,6 +28,7 @@
 <!--        <module>intermediary-module-ai</module>-->
         <module>intermediary-module-iot</module>
         <module>intermediary-module-ins-agent</module>
+        <module>intermediary-module-ins-order</module>
     </modules>
 
     <name>${project.artifactId}</name>
