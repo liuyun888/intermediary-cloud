@@ -32,6 +32,11 @@
             <version>${revision}</version>
         </dependency>
 
+        <dependency>
+            <groupId>cn.qmsk.insurance</groupId>
+            <artifactId>intermediary-module-ins-agent-server</artifactId>
+            <version>${revision}</version>
+        </dependency>
         <!-- 会员中心。默认注释，保证编译速度 -->
 <!--        <dependency>-->
 <!--            <groupId>cn.qmsk.insurance</groupId>-->
