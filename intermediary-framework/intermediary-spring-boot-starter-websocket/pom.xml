@@ -68,6 +68,10 @@
             <artifactId>intermediary-spring-boot-starter-biz-tenant</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
