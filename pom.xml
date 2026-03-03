@@ -29,6 +29,15 @@
         <module>intermediary-module-iot</module>
         <module>intermediary-module-ins-agent</module>
         <module>intermediary-module-ins-order</module>
+        <!-- 保险业务模块（V13 共10个，与 agent/order 并列） -->
+        <module>intermediary-module-ins-product</module>
+        <module>intermediary-module-ins-quote</module>
+        <module>intermediary-module-ins-commission</module>
+        <module>intermediary-module-ins-marketing</module>
+        <module>intermediary-module-ins-compliance</module>
+        <module>intermediary-module-ins-finance</module>
+        <module>intermediary-module-ins-ai</module>
+        <module>intermediary-module-ins-life</module>
     </modules>
 
     <name>${project.artifactId}</name>

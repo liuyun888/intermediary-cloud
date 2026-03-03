@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.qmsk.insurance</groupId>
+        <artifactId>intermediary</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>intermediary-module-ins-compliance</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>intermediary-module-ins-compliance-api</module>
+        <module>intermediary-module-ins-compliance-server</module>
+    </modules>
+    <name>${project.artifactId}</name>
+    <description>【合规双录】音视频采集/AI质检/存证</description>
+</project>

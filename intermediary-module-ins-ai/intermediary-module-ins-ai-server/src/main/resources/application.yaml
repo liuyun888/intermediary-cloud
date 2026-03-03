@@ -1,0 +1,72 @@
+server:
+  port: 28101
+spring:
+  application:
+    name: ins-ai-server
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  config:
+    import:
+      - optional:classpath:application-${spring.profiles.active}.yaml
+      - optional:nacos:${spring.application.name}-${spring.profiles.active}.yaml
+  servlet:
+    multipart:
+      max-file-size: 16MB
+      max-request-size: 32MB
+  cache:
+    type: REDIS
+    redis:
+      time-to-live: 1h
+logging:
+  file:
+    name: ${user.home}/logs/${spring.application.name}.log
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: NONE
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    banner: false
+  type-aliases-package: ${intermediary.info.base-package}.dal.dataobject
+  encryptor:
+    password: XDV71a+xqStEA3WH
+xxl:
+  job:
+    executor:
+      appname: ${spring.application.name}
+      logpath: ${user.home}/logs/xxl-job/${spring.application.name}
+    accessToken: default_token
+intermediary:
+  info:
+    version: 1.0.0
+    base-package: cn.qmsk.intermediary.module.ins.ai
+  web:
+    admin-ui:
+      url: http://dashboard.intermediary.iocoder.cn
+  xss:
+    enable: false
+    exclude-urls:
+      - ${management.endpoints.web.base-path}/**
+  swagger:
+    title: AI智能中台
+    description: 保障规划/智能核保/智能客服
+    version: ${intermediary.info.version}
+  tenant:
+    enable: true
+debug: false
